@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <form action="" method="get">
+      <input type="text" name="q" value="{{q}}" />
+      <input type="submit" value="검색" />
+    </form>
+
+    {% for a in article_list %}
+    <li>{{a.title}}</li>
+    {% endfor %}
+  </body>
+</html>

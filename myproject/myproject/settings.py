@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'bookmark',
     'accounts',
     'shop',
+    'article',
+    'django_extensions', # 확장기능 추가하는 App
+    'debug_toolbar', # 현재 요청/응답에 대한 다양한 디버깅 정보 확인 App
 ]
 
 MIDDLEWARE = [
@@ -51,7 +54,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
+
+INTERNAL_IPS = ['127.0.0.1']
 
 ROOT_URLCONF = 'myproject.urls'
 
