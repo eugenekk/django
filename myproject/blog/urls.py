@@ -13,4 +13,6 @@ urlpatterns = [
     path('', views.index2),
     path('test/', views.index),
     path('test2/<dddd:id>', views.test2), # id라는 인자를 받아서 씀
+    path('test4/', views.test4),
+    path('test5/', views.test5),
 ]

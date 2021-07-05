@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django_extensions', # 확장기능 추가하는 App
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,7 +43,8 @@ INSTALLED_APPS = [
     'accounts',
     'shop',
     'article',
-    'django_extensions', # 확장기능 추가하는 App
+    'book',
+    
     'debug_toolbar', # 현재 요청/응답에 대한 다양한 디버깅 정보 확인 App
 ]
 
@@ -64,7 +66,7 @@ ROOT_URLCONF = 'myproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'myproject', 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

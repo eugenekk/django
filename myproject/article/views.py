@@ -9,3 +9,7 @@ def article_list(request):
     if q:
         qs = qs.filter(title__icontains=q)
     return render(request, 'article/article_list.html', {'article_list' : qs, 'q':q})
+
+def detail(request, id):
+    article = Article.objects.get(id=id)
+    return render(request, "article/article_detail.html", {'article': article})
